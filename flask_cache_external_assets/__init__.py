@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import os.path
 import hashlib
 
 import requests
@@ -34,7 +35,7 @@ def cache_external_assets(url):
     path = cache_path(url, cache_dir)
     filepath = os.path.join(root, path)
 
-    if os.path.exists(filepath):
+    if os.path.exists(filepath) and os.stat(filepath).st_size > 0:
         return path
 
     try:
