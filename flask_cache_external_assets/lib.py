@@ -101,7 +101,6 @@ def cache_external_assets(url):
     return get_cached_file_with_extension(filepath)
 
 
-
 class CacheExternalAssets(object):
     """ Adds a jinja filter for caching external assets. """
     def __init__(self, app=None):
