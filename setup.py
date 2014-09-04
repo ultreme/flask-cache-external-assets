@@ -5,7 +5,7 @@ import os
 import re
 
 from setuptools import setup, find_packages
-from flask_cache_external_assets import __version__
+from flask_cache_external_assets.metadata import __version__
 
 MODULE_NAME = 'flask_cache_external_assets'
 DEPENDENCIES = [
