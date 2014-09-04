@@ -5,7 +5,6 @@ import os
 import re
 
 from setuptools import setup, find_packages
-from flask_cache_external_assets.metadata import __version__
 
 MODULE_NAME = 'flask_cache_external_assets'
 DEPENDENCIES = [
@@ -14,10 +13,18 @@ DEPENDENCIES = [
 ]
 TEST_DEPENDENCIES = []
 
+metadata_relpath = '{}/metadata.py'.format(MODULE_NAME)
+
+# Get package metadata. We use exec here instead of importing the
+# package directly, so we can avoid any potential import errors.
+with open(metadata_relpath) as fh:
+    metadata = {}
+    exec(fh.read(), globals(), metadata)
+
 
 setup(
     name=MODULE_NAME,
-    version=__version__,
+    version=metadata['__version__'],
     description='Flask extension for caching external assets',
     long_description='Long Grenier',
     author='CALC',
