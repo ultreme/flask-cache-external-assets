@@ -9,7 +9,8 @@ from flask_cache_external_assets import __version__
 
 MODULE_NAME = 'flask_cache_external_assets'
 DEPENDENCIES = [
-    'flask'
+    'flask',
+    'python-magic >=0.4',
 ]
 TEST_DEPENDENCIES = []
 
