@@ -13,7 +13,7 @@ DEPENDENCIES = [
 ]
 TEST_DEPENDENCIES = []
 
-metadata_relpath = '{}/metadata.py'.format(MODULE_NAME)
+metadata_relpath = MODULE_NAME + '/metadata.py'
 
 # Get package metadata. We use exec here instead of importing the
 # package directly, so we can avoid any potential import errors.
