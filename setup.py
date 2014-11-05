@@ -9,6 +9,7 @@ from setuptools import setup, find_packages
 MODULE_NAME = 'flask_cache_external_assets'
 DEPENDENCIES = [
     'flask',
+    'requests',
     'python-magic >=0.4',
 ]
 TEST_DEPENDENCIES = []
